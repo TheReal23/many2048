@@ -52,7 +52,7 @@ HTMLActuator.prototype.clearContainer = function (container) {
 };
 
 HTMLActuator.prototype.addTile = function (tile) {
-  var text = " 商周秦汉唐宋元明清　　";
+  var text = " Shang Zhou Qin Han Tang Song Yuan Ming Qing";
   var self = this;
   var text2 = function (n) { var r = 0; while (n > 1) r++, n >>= 1; return r; }
 
@@ -133,20 +133,20 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var mytxt=new Array(9);
-  mytxt[0]="连秦始皇都见不到了T.T";
-  mytxt[1]="都是赵高害得我！";
-  mytxt[2]="曹贼你还我大汉江山！";
-  mytxt[3]="安史之乱亡我大唐……";
-  mytxt[4]="元人铁蹄果然厉害！";
-  mytxt[5]="还是朱元璋厉害……";
-  mytxt[6]="天地会的弟兄们，反清复明啊！";
-  mytxt[7]="连辛亥革命的黎明都没等到……";
-  mytxt[8]="看不到天朝的太阳了 = =";
+  mytxt[0]="Even Qin Shihuang couldn't see T.T.";
+  mytxt[1]="It was Zhao Gao that hurt me!";
+  mytxt[2]="Cao Thief, you pay me back!";
+  mytxt[3]="An Shi's chaos, my Datang ...";
+  mytxt[4]="Yuanren hoofs are really powerful!";
+  mytxt[5]="Is Zhu Yuanzhang so powerful ...";
+  mytxt[6]="The brethren of the Heaven and Earth Society, clearing up and resurrecting!";
+  mytxt[7]="Not even the dawn of the 1911 Revolution ...";
+  mytxt[8]="I can't see the sun in the sky = =";
 
 
   var text3 = function (m) { var r = 0; while (m > 1) r++, m >>= 1; return r; }
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "中华人民共和国万岁！" : mytxt[text3(maxscore)-2];
+  var message = won ? "Long live the People's Republic of China!" : mytxt[text3(maxscore)-2];
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
@@ -184,7 +184,7 @@ HTMLActuator.prototype.scoreTweetButton = function () {
 };
 
 // HTMLActuator.prototype.scoreWeiboButton = function () {
-//   var text = "我赢了" + this.score + " 分在2048朝代版本！#2048朝代版";
+//   var text = "I won" + this.score + "Points in the 2048 dynasty version! # 2048 Dynasty Edition";
 //   <wb:share-button addition="number" type="button" default_text=text ralateUid="5091678934" pic="http%3A%2F%2Ftrue2048.github.io%2Fversions%2Fchaodai5%2Ffavicon.ico"></wb:share-button>
 //   return tweet;
 // };
